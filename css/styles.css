@@ -1,0 +1,69 @@
+html {
+    font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
+    box-sizing: border-box; /*Aplicar correctamente box-sizing*/
+}
+*, *:before, *:after { /*Aplicar correctamente box-sizing*/
+    box-sizing: inherit; /*Aplicar correctamente box-sizing*/
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
+    font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
+    line-height: 2; /*Interlineado*/
+    background-color: #ab88ff;
+    margin: 0;  
+}
+
+
+/*---------------------------------------------------Globales----------------------------------------------------------------*/
+img {
+    max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
+}
+
+/*---------------utilidades-----------------*/
+
+
+/*---------Medidas estandar para titulos-----------*/
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 3.2rem;
+    
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+/*---------------------------------------------------Header----------------------------------------------------*/
+.header {
+    width: 100%;
+    height: 8rem;
+    background-color: #ab88ff;
+}
+.header-img {
+    width: 20rem;
+    margin: 1rem auto auto 1rem;
+}
+.header-menu {
+    margin-right: 3rem;
+}
+.header-menu-profile {
+    margin-right: .8rem;
+    margin-bottom: 4rem;
+}
+.header-menu-profile img {
+    width: 4rem;
+}
+.header-menu ul {
+    /* display: none; */
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 10rem;
+    text-align: right;
+    margin: 0 0 0 -1.4rem;
+}
