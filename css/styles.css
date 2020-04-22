@@ -10,7 +10,7 @@ body {
     font-family: 'Muli', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
     font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
     line-height: 2; /*Interlineado*/
-    background-color: #ab88ff;
+    background-color: #8f57fd;
     margin: 0;  
 }
 
@@ -42,7 +42,7 @@ h4 {
 .header {
     width: 100%;
     height: 8rem;
-    background-color: #ab88ff;
+    background-color: #8f57fd;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@ h4 {
     position: absolute;
     width: 10rem;
     text-align: right;
-    margin: 0 0 0 -2.5rem;
+    margin: 0 0 0 -2rem;
 }
 .header-menu:hover ul, ul:hover { /*Para que se nos muestre el menu desplegable con los <li>*/
     display: block;
@@ -89,3 +89,37 @@ h4 {
     text-decoration: underline;
 }
 
+
+/*---------------------------------------------------Main----------------------------------------------------*/
+.main {
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap; /*Para que empujen los elementos si ocupan todo el espacio*/
+    justify-content: center;
+}
+.main-title {
+    flex-basis: 100%; /*para que el elemtno ocupe todo el width y empuje el elemento debajo*/
+    color: #ffffff;
+    font-size: 2.5rem;
+    display: flex; /*Para ocomodar el texto dentro del h2*/
+    justify-content: center; /*Acomodamos el texto al centro*/
+    align-self: flex-end; /*Alineamos el texto verticalmente al final*/
+}
+.input {
+    flex-basis: 70%; /*para que ocupe el 70% del width*/
+    background-color: rgba(255, 255, 2555, 0.1);
+    border: .2rem solid #ffffff;
+    border-radius: 2.5rem;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.6rem;
+    height: 5rem;
+    padding: 0 2rem;
+    /* width: 70%; */
+}
+input:focus { /*Para quitar el outline cuando se le hace focus al input*/
+    outline: none;
+}
+::placeholder { /*Para cambiar de color el placeholder de los inputs*/
+    color: #ffffff;
+}
