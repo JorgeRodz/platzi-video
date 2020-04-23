@@ -12,10 +12,11 @@ body {
     line-height: 2; /*Interlineado*/
     background-color: #8f57fd;
     margin: 0;  
+    margin-bottom: 5rem;
 }
 
 
-/*---------------------------------------------------Globales----------------------------------------------------------------*/
+/*---------------------------------------------------Globales------------------------------------------------------*/
 img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
@@ -120,6 +121,45 @@ h4 {
 input:focus { /*Para quitar el outline cuando se le hace focus al input*/
     outline: none;
 }
-::placeholder { /*Para cambiar de color el placeholder de los inputs*/
+input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
     color: #ffffff;
 }
+
+/*------------------------------------------------ Section .carousel -----------------------------------------------*/
+.carousel {
+    width: 100%;
+    padding: 3rem;
+    position: relative;
+    overflow: scroll; /*para que se puede hacer scroll*/
+}
+.carousel-container {
+    white-space: nowrap; /*Para que los elementos agregagados no se apilen en el contenedor*/
+    margin: 7rem 0;
+    padding-bottom: 1rem;
+}
+.carousel-item {
+    display: inline-block; /*para que las cartas se posicionen al lado*/
+    width: 20rem;
+    height: 25rem;
+    margin-right: 1rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    overflow: hidden; /*para esconder las esquinas de la images y se aplique el border-radius*/
+    cursor: pointer; /*para que se muestre la manita que apunta*/
+    /*---------para las transiciones-------------*/
+    transition: 450ms; /*para que se vea el efecto de la transicion*/
+    transform-origin: center left; /*acomodamos los items para cuando se realice la transicion*/
+}
+.carousel-item:hover ~ .carousel-item { /*cuando hacemos hover a los items el carrousel, para que los otros item se acomoden tambien*/
+    transform: translate3d(10rem, 0, 0); /*para aplicar la animacion*/
+}
+.carousel-container:hover .carousel-item { /*para que a los items a los cuales no se les hace hover muestren una opacidad*/
+    opacity: 0.3; /*para que los items a los que no se le hace :hover muestren una opacidad*/
+}
+.carousel-container:hover .carousel-item:hover { /*para que al item al que se le posiciona el cursor aumente de tamaño,y haga el efecto de que esta seleccionado*/
+    transform: scale(1.5); /*aumentamos su tamaño*/
+    opacity: 1; /*para que se muestre sin la opacidad*/
+}
+
+
+
