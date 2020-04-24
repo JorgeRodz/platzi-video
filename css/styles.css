@@ -39,6 +39,8 @@ h4 {
     font-size: 2.8rem;
 }
 
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- bucasr.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
 /*---------------------------------------------------Header----------------------------------------------------*/
 .header {
     width: 100%;
@@ -149,6 +151,8 @@ input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
     /*---------para las transiciones-------------*/
     transition: 450ms; /*para que se vea el efecto de la transicion*/
     transform-origin: center left; /*acomodamos los items para cuando se realice la transicion*/
+    /*--------------------------------*/
+    position: relative; /*para que se tome como referencia este contenedor*/
 }
 .carousel-item:hover ~ .carousel-item { /*cuando hacemos hover a los items el carrousel, para que los otros item se acomoden tambien*/
     transform: translate3d(10rem, 0, 0); /*para aplicar la animacion*/
@@ -161,5 +165,40 @@ input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
     opacity: 1; /*para que se muestre sin la opacidad*/
 }
 
+/*-----Agregando elementos al carousel-item------*/
+.carousel-item_img {
+    width: 200px; /*establecemos el mismo width que el item*/
+    height: 250px; /*establecemos el mismo height que el item*/
+    object-fit: cover; /*para tratar de la imagen se vea correctamente*/
+}
+.carousel-item:hover .carousel-item_img {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,1));
+}
+.carousel-item_details {
+    font-size: 1rem;
+    opacity: 0; /*para que no se muestre...ya que se mostrara cuando se le haga :hover al item del carousel*/
+    transition: 450ms; /*agregamos algo de animacion*/
+    padding: 1rem;
+    position: absolute; /*para posicionar los elementos dentro del carousel-item*/
+    bottom: 0; /*para posicionarlos en la parte de abajo*/
+}
+.carousel-item_details i { /*estilizamos nuestro iconos*/
+    font-size: 2rem;
+    color: #34bea6;
+    margin-right: .25rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+.carousel-item_details * { /*para seleccionar todos los hijos*/
+    margin: 0;
+    font-weight: bold;
+}
+.carousel-item:hover .carousel-item_details {
+    opacity: 1; /*para que se muestre el contenido*/
+    color: white;
+}
 
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - i-sesion.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
