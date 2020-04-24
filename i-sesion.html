@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!--Indica que estamos usando html5-->
+<html lang="es"><!--Definimos como lenguaje el español.-->
+<head>
+    <meta charset="UTF-8"><!--Para que se pueden leer caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Etiqueta necesaria para trabajar con resposive design-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Para agregar compatibilidad con internet explorer-->
+    <title>Iniciar Sesión</title><!--Titulo del documento-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header-img" src="images/logo-platzi-video.png" alt="">
+    </header>
+    <section class="login">
+        <section class="login-container">
+            <h2>Inicia sesión</h2>
+            <form class="login-container_form" action="">
+                <input class="input" type="text" placeholder="Correo">
+                <input class="input" type="password" placeholder="Contraseña">
+                <button class="button">Iniciar sesion</button>
+                <div class="login-container__remember_me">
+                    <label for="chbox-remember">
+                        <input type="checkbox" name="" id="chbox-remember" value="1">Recuerdame
+                    </label>
+                    <a href="#">Olvidé mi contraseña</a>
+                </div>
+            </form>
+        </section><!--login-container-->
+        <section class="login-container_social">
+            <div><i class="fab fa-google"></i> Inicia sesion con Google</div>
+            <div><i class="fab fa-twitter"></i> Inicia sesion con Twitter</div>
+        </section><!--login-container__social_media-->
+        <p class="login-container_register">No tienes ninguna cuenta <a href="#">Regístrate</a></p>
+    </section>
+    <footer class="footer">
+        <a href="#">Terminos de uso</a>
+        <a href="#">Declaracion de privacidad/a>
+        <a href="#">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
