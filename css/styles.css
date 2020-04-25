@@ -355,3 +355,16 @@ p.login-container_i-sesion a {
     font-weight: bold;
 }
 
+@media only screen and (max-width:600px) {
+    .login-container {
+        background-color: transparent; /*para que no se vea el sombreado blanco que le habiamos puesto*/
+        border: none; 
+        padding: 0; 
+        max-width: 30rem; /*establecemos un tamaño fijo*/
+        width: 100%; 
+    }
+    footer.footer {
+        flex-direction: column; /*para que se apilen los flex-items*/
+        align-items: flex-start; /*los alineamos al principio del contenedor  flex*/
+    }
+}
