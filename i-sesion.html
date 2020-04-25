@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header i-sesion">
         <img class="header-img" src="images/logo-platzi-video.png" alt="">
     </header>
-    <section class="login">
+    <main class="login">
         <section class="login-container">
             <h2>Inicia sesión</h2>
             <form class="login-container_form" action="">
-                <input class="input" type="text" placeholder="Correo">
-                <input class="input" type="password" placeholder="Contraseña">
+                <input class="i-sesion" type="text" placeholder="Correo">
+                <input class="i-sesion" type="password" placeholder="Contraseña">
                 <button class="button">Iniciar sesion</button>
                 <div class="login-container__remember_me">
                     <label for="chbox-remember">
@@ -28,16 +28,16 @@
                     <a href="#">Olvidé mi contraseña</a>
                 </div>
             </form>
+            <section class="login-container_social">
+                <div><i class="fab fa-google"></i><p>Inicia sesion con Google</p></div>
+                <div><i class="fab fa-twitter"></i><p>Inicia sesion con Twitter</p></div>
+            </section><!--login-container__social_media-->
+            <p class="login-container_register">No tienes ninguna cuenta <a href="#">Regístrate</a></p>
         </section><!--login-container-->
-        <section class="login-container_social">
-            <div><i class="fab fa-google"></i> Inicia sesion con Google</div>
-            <div><i class="fab fa-twitter"></i> Inicia sesion con Twitter</div>
-        </section><!--login-container__social_media-->
-        <p class="login-container_register">No tienes ninguna cuenta <a href="#">Regístrate</a></p>
-    </section>
+    </main><!--login-->
     <footer class="footer">
         <a href="#">Terminos de uso</a>
-        <a href="#">Declaracion de privacidad/a>
+        <a href="#">Declaracion de privacidad</a>
         <a href="#">Centro de ayuda</a>
     </footer>
 </body>

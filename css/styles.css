@@ -16,15 +16,36 @@ body {
 }
 
 
-/*---------------------------------------------------Globales------------------------------------------------------*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- Globales -!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
 img {
     max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
 }
 
-/*---------------utilidades-----------------*/
+/*---------------utilidades-------------------------*/
 
 
-/*---------Medidas estandar para titulos-----------*/
+/*------------- inputs-globales --------------------*/
+input:focus { /*Para quitar el outline cuando se le hace focus al input*/
+    outline: none;
+}
+input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
+    color: #ffffff;
+}
+input {
+    color: white;
+}
+
+/*-------------- enlaces-globales ------------------*/
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*---------Medidas estandar para titulos------------*/
 h1 {
     font-size: 4rem;
 }
@@ -39,9 +60,7 @@ h4 {
     font-size: 2.8rem;
 }
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- bucasr.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-/*---------------------------------------------------Header----------------------------------------------------*/
+/*------------------ Global-Header -----------------*/
 .header {
     width: 100%;
     height: 8rem;
@@ -54,6 +73,11 @@ h4 {
     width: 20rem;
     margin: 1rem auto auto 1rem;
 }
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- bucasr.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*---------------------------------------------------Header----------------------------------------------------*/
 .header-menu {
     margin-top: 1rem;
     margin-right: 3rem;
@@ -86,10 +110,6 @@ h4 {
 }
 .header-menu li a {
     color: #ffffff;
-    text-decoration: none;
-}
-.header-menu li a:hover {
-    text-decoration: underline;
 }
 
 
@@ -120,12 +140,7 @@ h4 {
     padding: 0 2rem;
     /* width: 70%; */
 }
-input:focus { /*Para quitar el outline cuando se le hace focus al input*/
-    outline: none;
-}
-input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
-    color: #ffffff;
-}
+
 
 /*------------------------------------------------ Section .carousel -----------------------------------------------*/
 .carousel {
@@ -171,7 +186,7 @@ input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
     height: 250px; /*establecemos el mismo height que el item*/
     object-fit: cover; /*para tratar de la imagen se vea correctamente*/
 }
-.carousel-item:hover .carousel-item_img {
+.carousel-item:hover .carousel-item_img { 
     background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,1));
 }
 .carousel-item_details {
@@ -201,4 +216,129 @@ input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - i-sesion.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*---------------------------------------------------- Header -------------------------------------------------------*/
+header.header.i-sesion {
+    background-color: #21c08d;
+}
+
+/*------------------------------------------------------- Main ------------------------------------------------------*/
+.login {
+    background: linear-gradient(#21c08d, #ab88ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    min-height: calc(100vh - 20rem);
+    padding: 5rem 0;
+}
+
+/*------------------------*/
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: .2rem solid white;
+    border-radius: 4rem;
+    color: white;
+    padding: 6rem 6.8rem 4rem;
+    min-height: 70rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*--------------------------*/
+.login-container_form {
+    display: flex;
+    flex-direction: column;
+}
+.login-container_form label {
+    font-size: 1.4rem;
+}
+.login-container_form input.i-sesion {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: .2rem solid #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem 0;
+    height: 5rem;
+}
+.login-container_form button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 2.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2rem;
+    letter-spacing: .1rem;
+    margin: 1rem 0;
+}
+.login-container_form button:focus {
+    outline: none;
+}
+.login-container_form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.login-container__remember_me {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.login-container__remember_me a {
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+/*--------------------------------*/
+.login-container_social {
+    margin: 6rem 0;
+}
+.login-container_social div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.login-container_social div * {
+    display: inline-block;
+    margin: 0;
+}
+.login-container_social div i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+/*--------------------------------*/
+.login-container_register {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+.login-container_register a {
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------- Footer --------------------------------------------------------*/
+footer.footer {
+    position: absolute;
+    height: 10rem;
+    width: 100%;
+    background-color: #ab88ff;
+    display: flex;
+    align-items: center;
+}
+footer.footer a {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding-left: 3rem;
+}
+
+
 
