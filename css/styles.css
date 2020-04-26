@@ -23,6 +23,20 @@ img {
 }
 
 /*---------------utilidades-------------------------*/
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+}
 
 
 
@@ -78,6 +92,7 @@ h4 {
 /*----------------- Footer-Global --------------*/
 footer.footer {
     position: absolute;
+    bottom: 0;
     height: 10rem;
     width: 100%;
     background-color: #ab88ff;
@@ -404,6 +419,54 @@ p.login-container_i-sesion a {
     font-weight: bold;
 }
 
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- notfound.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+html.not-found, body.not-found {
+    background: linear-gradient(#3cb77e, #867efa);
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header.not-found {
+    background-color: transparent;
+}
+
+main.not-found {
+    height: 100%;
+}
+div.not-found_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h1.not-found_container_title {
+    font-size: 6rem;
+}
+div.not-found_container * {
+    color: #ffffff;
+    margin: 0;
+}
+
+footer.not-found {
+    background-color: transparent;
+    position: static;
+}
+
+
+
+
+
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- Media Queries - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width:600px) {
     .login-container {
         background-color: transparent; /*para que no se vea el sombreado blanco que le habiamos puesto*/
