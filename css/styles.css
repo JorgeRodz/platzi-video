@@ -25,6 +25,7 @@ img {
 /*---------------utilidades-------------------------*/
 
 
+
 /*------------- inputs-globales --------------------*/
 input:focus { /*Para quitar el outline cuando se le hace focus al input*/
     outline: none;
@@ -162,6 +163,7 @@ footer.footer a {
 .carousel {
     width: 100%;
     padding: 3rem;
+    margin-bottom: 5rem;
     position: relative;
     overflow-x: scroll; /*para que se muestre solo la scrollbar en el "eje x" osea solo la barra horizontal*/
 }
@@ -272,6 +274,10 @@ footer.footer a {
     color: white;
 }
 
+/*---------------------------------------------------Footer----------------------------------------------------*/
+footer.footer.f-buscar {
+    background: #8f57fd;
+}
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - i-sesion.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
