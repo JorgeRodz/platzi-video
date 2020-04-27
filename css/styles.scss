@@ -1,0 +1,479 @@
+html {
+    font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
+    box-sizing: border-box; /*Aplicar correctamente box-sizing*/
+}
+*, *:before, *:after { /*Aplicar correctamente box-sizing*/
+    box-sizing: inherit; /*Aplicar correctamente box-sizing*/
+}
+
+body {
+    font-family: 'Muli', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
+    font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
+    line-height: 2; /*Interlineado*/
+    background-color: #8f57fd;
+    margin: 0;  
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- Globales -!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+img {
+    max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
+}
+
+/*---------------variables-------------------------*/
+$blanco: #ffffff;
+
+/*---------------utilidades-------------------------*/
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+/*------------- inputs-globales --------------------*/
+input:focus { /*Para quitar el outline cuando se le hace focus al input*/
+    outline: none;
+}
+input::placeholder { /*Para cambiar de color el placeholder de los inputs*/
+    color: #ffffff;
+}
+input {
+    color: white;
+}
+
+/*-------------- enlaces-globales ------------------*/
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*---------Medidas estandar para titulos------------*/
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 3.2rem;
+    
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+/*------------------ Header-Global -----------------*/
+.header {
+    width: 100%;
+    height: 8rem;
+    background-color: #8f57fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-img {
+    width: 20rem;
+    margin: 1rem auto auto 1rem;
+}
+
+/*----------------- Footer-Global --------------*/
+footer.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: #ab88ff;
+    display: flex;
+    align-items: center;
+}
+footer.footer a {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding-left: 3rem;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- bucasr.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*---------------------------------------------------Header----------------------------------------------------*/
+.header-menu {
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+.header-menu-profile {
+    display: flex;
+    margin-right: .8rem;
+    align-items: center;
+    color: #ffffff;
+}
+.header-menu-profile i {
+    font-size: 2rem;
+}
+.header-menu-profile p {
+    margin-left: 1rem;
+}
+.header-menu ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 10rem;
+    text-align: right;
+    margin: 0 0 0 -3.5rem;
+}
+.header-menu:hover ul, ul:hover { /*Para que se nos muestre el menu desplegable con los <li>*/
+    display: block;
+}
+.header-menu li {
+    margin: 0;
+}
+.header-menu li a {
+    color: #ffffff;
+}
+
+
+/*---------------------------------------------------Main----------------------------------------------------*/
+.main {
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap; /*Para que empujen los elementos si ocupan todo el espacio*/
+    justify-content: center;
+}
+.main-title {
+    flex-basis: 100%; /*para que el elemtno ocupe todo el width y empuje el elemento debajo*/
+    color: #ffffff;
+    font-size: 2.5rem;
+    display: flex; /*Para ocomodar el texto dentro del h2*/
+    justify-content: center; /*Acomodamos el texto al centro*/
+    align-self: flex-end; /*Alineamos el texto verticalmente al final*/
+}
+.input.buscar {
+    flex-basis: 70%; /*para que ocupe el 70% del width*/
+    background-color: rgba(255, 255, 2555, 0.1);
+    border: .2rem solid #ffffff;
+    border-radius: 2.5rem;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.6rem;
+    height: 5rem;
+    padding: 0 2rem;
+    /* width: 70%; */
+}
+
+/*------------------------------------------------ Section .carousel -----------------------------------------------*/
+.carousel {
+    width: 100%;
+    padding: 3rem;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow-x: scroll; /*para que se muestre solo la scrollbar en el "eje x" osea solo la barra horizontal*/
+}
+
+/*----Scrollbar-----*/
+.carousel::-webkit-scrollbar {
+    height: .8rem; /*para agregarle un alto a nuestra scrollbar*/
+}
+.carousel::-webkit-scrollbar-track {
+    background-color: #8f57fd;
+}
+.carousel::-webkit-scrollbar-track:hover,
+.carousel::-webkit-scrollbar-track:active {
+    background-color: #b592fb;
+}
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #383838ed;
+    border-radius: .4rem;
+}
+.carousel::-webkit-scrollbar-thumb:hover {
+    background-color: #272727;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.carousel::-webkit-scrollbar-thumb:active {
+    background-color: #681dff;
+    border: 1px solid #00000017;
+}
+/*----Scrollbar-----*/
+
+.categories-title {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+.carousel-container {
+    white-space: nowrap; /*Para que los elementos agregagados no se apilen en el contenedor*/
+    margin: 5.5rem 0 3rem;
+    padding-bottom: 1rem;
+}
+.carousel-item {
+    display: inline-block; /*para que las cartas se posicionen al lado*/
+    width: 20rem;
+    height: 25rem;
+    margin-right: 1rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    overflow: hidden; /*para esconder las esquinas de la images y se aplique el border-radius*/
+    cursor: pointer; /*para que se muestre la manita que apunta*/
+    /*---------para las transiciones-------------*/
+    transition: 450ms; /*para que se vea el efecto de la transicion*/
+    transform-origin: center left; /*acomodamos los items para cuando se realice la transicion*/
+    /*--------------------------------*/
+    position: relative; /*para que se tome como referencia este contenedor ya que se mostrara un sombreado en cada item*/
+}
+.carousel-item:hover ~ .carousel-item { /*cuando hacemos hover a los items el carrousel, para que los otros item se acomoden tambien*/
+    transform: translate3d(10rem, 0, 0); /*para aplicar la animacion*/
+}
+.carousel-container:hover .carousel-item { /*para que a los items a los cuales no se les hace hover muestren una opacidad*/
+    opacity: 0.3; /*para que los items a los que no se le hace :hover muestren una opacidad*/
+}
+.carousel-container:hover .carousel-item:hover { /*para que al item al que se le posiciona el cursor aumente de tamaño,y haga el efecto de que esta seleccionado*/
+    transform: scale(1.5); /*aumentamos su tamaño*/
+    opacity: 1; /*para que se muestre sin la opacidad*/
+}
+
+/*-----Agregando imagenes/iconos y titulo y subtitulo al carousel-item------*/
+.carousel-item_img {
+    width: 200px; /*establecemos el mismo width que el item*/
+    height: 250px; /*establecemos el mismo height que el item*/
+    object-fit: cover; /*para tratar de la imagen se vea correctamente*/
+}
+.carousel-item_details {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 1rem;
+    opacity: 0; /*para que no se muestre...ya que se mostrara cuando se le haga :hover al item del carousel*/
+    transition: 450ms opacity; /*agregamos algo de animacion*/
+    padding: 1rem;
+    /*display flex: para posicionar el contenido en la parte de abajo*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /*para que se muestre el background degradado que le pusimos*/
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+}
+.carousel-item_details i { /*estilizamos nuestro iconos*/
+    margin-right: .5rem;
+    padding: .3rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #34bea6;
+    border: 1px solid #34bea6;
+    border-radius: 25%;
+}
+.carousel-item_details * { /*para seleccionar todos los hijos*/
+    margin: 0;
+    font-weight: bold;
+}
+.carousel-item_details .carousel-item_details-subtitle { /*para que se junte con el title*/
+    margin-top: -.5rem;
+}
+.carousel-item:hover .carousel-item_details {
+    opacity: 1; /*para que se muestre el contenido*/
+    color: white;
+}
+
+/*---------------------------------------------------Footer----------------------------------------------------*/
+footer.footer.f-buscar {
+    background: #8f57fd;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - i-sesion.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*---------------------------------------------------- Header -------------------------------------------------------*/
+header.header.i-sesion {
+    background-color: #21c08d;
+}
+
+/*------------------------------------------------------- Main ------------------------------------------------------*/
+.login {
+    background: linear-gradient(#21c08d, #ab88ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    min-height: calc(100vh - 20rem);
+    padding: 5rem 0;
+}
+
+/*------------------------*/
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: .2rem solid white;
+    border-radius: 4rem;
+    color: white;
+    padding: 6rem 6.8rem 4rem;
+    min-height: 70rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*--------------------------*/
+.login-container_form {
+    display: flex;
+    flex-direction: column;
+}
+.login-container_form label {
+    font-size: 1.4rem;
+}
+.login-container_form input.i-sesion {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: .2rem solid #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem 0;
+    height: 5rem;
+}
+.login-container_form button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 2.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2rem;
+    letter-spacing: .1rem;
+    margin: 1rem 0;
+}
+.login-container_form button:focus {
+    outline: none;
+}
+.login-container_form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.login-container__remember_me {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.login-container__remember_me a {
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+/*--------------------------------*/
+.login-container_social {
+    margin: 6rem 0;
+}
+.login-container_social div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.login-container_social div * {
+    display: inline-block;
+    margin: 0;
+}
+.login-container_social div i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+/*--------------------------------*/
+.login-container_register {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    
+    a {
+        font-size: 1.6rem;
+        color: $blanco;
+        font-weight: bold;
+    }
+}
+// .login-container_register a {
+//     font-size: 1.6rem;
+//     color: $blanco;
+//     font-weight: bold;
+// }
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- registro.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*Se utilizaron las mismas clases del formulario anterior para no repetir reglas CSS*/
+
+/*cambios el <p> que esta al final del formulario*/
+p.login-container_i-sesion {
+    align-self: center;
+    margin: 10rem 0 5rem;
+}
+p.login-container_i-sesion a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- notfound.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+html.not-found, body.not-found {
+    background: linear-gradient(#3cb77e, #867efa);
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header.not-found {
+    background-color: transparent;
+}
+
+main.not-found {
+    height: 100%;
+}
+div.not-found_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h1.not-found_container_title {
+    font-size: 6rem;
+}
+div.not-found_container * {
+    color: #ffffff;
+    margin: 0;
+}
+
+footer.not-found {
+    background-color: transparent;
+    position: static;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- Media Queries - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media only screen and (max-width:600px) {
+    .login-container {
+        background-color: transparent; /*para que no se vea el sombreado blanco que le habiamos puesto*/
+        border: none; 
+        padding: 0; 
+        max-width: 30rem; /*establecemos un tamaño fijo*/
+        width: 100%; 
+    }
+    footer.footer {
+        flex-direction: column; /*para que se apilen los flex-items*/
+        align-items: flex-start; /*los alineamos al principio del contenedor  flex*/
+    }
+}
